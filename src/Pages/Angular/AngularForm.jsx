@@ -4,9 +4,9 @@ import MCQQuestion from './MCQQuestion';
 
 const Angular = () => {
   return (
-    <Box p={8}>
+    <Box p={8} mr={20} ml={60}>
       {/* Heading */}
-      <Heading mb={4} textAlign={'center'}>Exam Page</Heading>
+      <Heading mb={4} textAlign={'center'}>Railworld India</Heading>
 
       {/* Line with Time, Topic, and Name */}
       <Flex mb={4}>
