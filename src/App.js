@@ -1,10 +1,12 @@
 import './App.css';
+import Angular from './Pages/Angular/AngularForm';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello</h1>
-    </div>
+    <ChakraProvider>
+      <Angular />
+    </ChakraProvider>
   );
 }
 
