@@ -1,10 +1,12 @@
 import './App.css';
+import JavaScript from './Pages/Javascript/JavascriptForm';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello</h1>
-    </div>
+    <ChakraProvider>
+      <JavaScript />
+    </ChakraProvider>
   );
 }
 
