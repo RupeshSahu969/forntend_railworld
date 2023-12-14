@@ -9,12 +9,15 @@ import MainRoutes from './Components/MainRoutes';
 function App() {
   return (
 
+    <ChakraProvider>
+    {/*<Angular/>*/}
+      {/* <JavaScript /> */}
+    </ChakraProvider>
+
+
     <div className="App">
      <MainRoutes/>
     </div>
-
-    
-
   );
 }
 
