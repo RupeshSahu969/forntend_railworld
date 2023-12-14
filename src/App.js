@@ -1,13 +1,13 @@
-import './App.css';
-import JavaScript from './Pages/Javascript/JavascriptForm';
-import { ChakraProvider } from '@chakra-ui/react';
+import React from 'react'
+import JavascriptForm from './Pages/Javascript/JavascriptForm'
 
-function App() {
+
+const App = () => {
   return (
-    <ChakraProvider>
-      <JavaScript />
-    </ChakraProvider>
-  );
+    <div>
+      <JavascriptForm/>   
+    </div>
+  )
 }
 
-export default App;
+export default App
