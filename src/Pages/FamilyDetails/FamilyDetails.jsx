@@ -29,7 +29,8 @@ const FamilyDetails = () => {
           fontWeight={"bold"}
           mt={"2rem"}
           mb={"3rem"}
-          ml={{ base: "0rem", md: "1rem" }}
+          // ml={{ base: "0rem", md: "1rem" }}
+          textAlign={"start"}
         >
           {" "}
           FAMILY DETAILS{" "}
@@ -39,10 +40,10 @@ const FamilyDetails = () => {
         >
           <thead>
             <tr>
-              <th  align={"start"} style={{ border: "1px solid black" }}> Name</th>
-              <th  align={"start"} style={{ border: "1px solid black" }}> Relation withyou </th>
-              <th  align={"start"} style={{ border: "1px solid black" }}> Profession </th>
-              <th  align={"start"} style={{ border: "1px solid black" }}> Age </th>
+              <th  style={{ border: "1px solid black" }}> Name</th>
+              <th  style={{ border: "1px solid black" }}> Relation withyou </th>
+              <th  style={{ border: "1px solid black" }}> Profession </th>
+              <th  style={{ border: "1px solid black" }}> Age </th>
               <th  align={"start"} style={{ border: "1px solid black" }}> Is depended on you? Y/N </th>
             </tr>
           </thead>
