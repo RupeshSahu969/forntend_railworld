@@ -30,6 +30,7 @@ const BlockChan = () => {
 
     return () => clearInterval(timer);
     
+
   }, []);
 
 
@@ -43,7 +44,7 @@ const BlockChan = () => {
     <div>
       <Box maxW="800px" m="auto" textAlign="center">
         <Text fontSize="28" fontWeight="bold" mb="6">
-          Railworld India Pvt
+          Railworld India Pvt Ltd
         </Text>
 
         <Flex justifyContent="center" alignItems="center" mt="4">
@@ -53,7 +54,7 @@ const BlockChan = () => {
             fontWeight="bold"
             mb="4"
             textAlign="center"
-            mr={"30rem"}
+            mr={{base:"3rem", md:"30rem"}}
           >
             Blockchain
           </Text>
@@ -62,7 +63,7 @@ const BlockChan = () => {
           </Text>
         </Flex>
 
-        <Text fontSize="lg" fontWeight="bold" mb="10" textAlign={"start"}>
+        <Text fontSize="lg" ml={{base:"1rem", md:"0rem"}} fontWeight="bold" mb="10" textAlign={"start"}>
           Blockchain technology is a decentralized and distributed digital
           ledger system that records transactions across multiple computers.
           Each transaction, or block, is linked to the previous one through
@@ -74,31 +75,31 @@ const BlockChan = () => {
         </Text>
 
         <FormControl mt="4">
-          <FormLabel fontSize="lg" mb="2">
+          <FormLabel fontSize="lg" mb="2" ml={{base:"1rem", md:"0rem"}}>
             1. What is blockchain technology, and how does it record
             transactions?
           </FormLabel>
           <UnorderedList styleType="none" pl="0">
-            <ListItem>
+            <ListItem mr={{base:"1rem", md:"0rem"}}>
               <Textarea rows="3" />
             </ListItem>
           </UnorderedList>
         </FormControl>
 
         <FormControl mt="4">
-          <FormLabel fontSize="lg" mb="2">
+          <FormLabel fontSize="lg" mb="2" ml={{base:"1rem", md:"0rem"}}>
             2. Other than cryptocurrencies, name at least two other applications
             of blockchain technology.
           </FormLabel>
           <UnorderedList styleType="none" pl="0">
-            <ListItem>
+            <ListItem mr={{base:"1rem", md:"0rem"}}>
               <Textarea rows="3" />
             </ListItem>
           </UnorderedList>
         </FormControl>
 
         <FormControl mt="4">
-          <FormLabel fontSize="lg" mb="2">
+          <FormLabel fontSize="lg" mb="2" ml={{base:"1rem", md:"0rem"}}>
             3. What is the significance of cryptographic hashes in blockchain
             technology?
           </FormLabel>
@@ -106,21 +107,21 @@ const BlockChan = () => {
         </FormControl>
 
         <FormControl mt="4">
-          <FormLabel fontSize="lg" mb="2">
+          <FormLabel fontSize="lg" mb="2" ml={{base:"1rem", md:"0rem"}}>
             4. What is a "block" in the context of blockchain?
           </FormLabel>
           <Textarea rows="3" />
         </FormControl>
 
         <FormControl mt="4">
-          <FormLabel fontSize="lg" mb="2">
+          <FormLabel fontSize="lg" mb="2" ml={{base:"1rem", md:"0rem"}}>
             5. Why is blockchain technology considered a decentralized system?
           </FormLabel>
           <Textarea rows="3" />
         </FormControl>
 
         <Flex justify="flex-start" mb={4} mt="2rem">
-          <Button type="submit" colorScheme="teal" width={"30%"}>
+          <Button type="submit" colorScheme="teal" width={{base:"90%",md:"20%"}} m={{base:"auto"}}>
             Submit
           </Button>
         </Flex>

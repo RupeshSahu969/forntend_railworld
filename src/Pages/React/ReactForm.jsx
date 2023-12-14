@@ -131,7 +131,7 @@ const ReactForm = () => {
         <Flex direction="column" align="start" mb={2}>
           {questions.map((question, index) => (
             <Box key={question.id} mb={4}>
-              <Text mb={2} fontWeight="bold">
+              <Text mb={2} fontWeight="bold" textAlign={"start"}>
                 {question.question}
               </Text>
               <RadioGroup
