@@ -1,13 +1,15 @@
-import React from 'react'
-import JavascriptForm from './Pages/Javascript/JavascriptForm'
+
+import './App.css';
 
 
 const App = () => {
   return (
-    <div>
-      <JavascriptForm/>   
+
+
+    <div className="App">
+   
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
