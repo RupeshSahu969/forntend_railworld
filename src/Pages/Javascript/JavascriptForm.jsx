@@ -11,6 +11,9 @@ import {
  Center,
 } from '@chakra-ui/react';
 
+import {useNavigate} from "react-router-dom"
+
+
 const JavascriptForm = () => {
     const [selectedOptions, setSelectedOptions] = useState(Array(5).fill(''));
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,6 +35,14 @@ const JavascriptForm = () => {
       return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
   
+
+    const navigate = useNavigate();
+
+    const handleNext = () => {
+      navigate("/blockchan");
+    };
+
+
     const questions = [
       {
         id: 1,
@@ -110,12 +121,14 @@ const JavascriptForm = () => {
         </Center>
         <Flex justify="space-between" mb="2rem" align="center">
           <Text  fontSize="24" fontWeight="bold">React Quiz</Text>
-          <Text fontSize="22" fontWeight="bold">Time Left: {formatTime(timeLeft)}</Text>
+          <Text fontSize="22" fontWeight="bold" color={"red"}>Time Left: {formatTime(timeLeft)}</Text>
         </Flex>
         <Flex direction="column" align="start" mb={2}>
           {questions.map((question, index) => (
             <Box key={question.id} mb={4}>
-              <Text mb={2} fontWeight="bold">{question.question}</Text>
+              <Text mb={2} fontWeight="bold" textAlign={"start"}>
+                {question.question}
+              </Text>
               <RadioGroup
                 onChange={(value) => handleOptionChange(index, value)}
                 value={selectedOptions[index]}
@@ -131,13 +144,13 @@ const JavascriptForm = () => {
             </Box>
           ))}
         </Flex>
-        {!isSubmitted ? (
+       
            <Flex justify="flex-start" mb={4}>
-           <Button type="submit" colorScheme="teal">
+           <Button type="submit" colorScheme="teal" onClick={handleNext}>
              Next
            </Button>
          </Flex>
-      ) : null}
+   
       </Box>
     );
   

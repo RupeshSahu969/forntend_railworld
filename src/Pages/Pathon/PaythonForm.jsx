@@ -11,18 +11,20 @@ import {
  Center,
 } from '@chakra-ui/react';
 
+import { useNavigate} from "react-router-dom"
+
 const PythonForm = () => {
     const [selectedOptions, setSelectedOptions] = useState(Array(5).fill(''));
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(180); // 3 minutes in seconds
+    const [timeLeft, setTimeLeft] = useState(180); 
   
     useEffect(() => {
-      // Countdown timer
+    
       const timer = setInterval(() => {
         setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
       }, 1000);
   
-      // Cleanup the timer on component unmount
+    
       return () => clearInterval(timer);
     }, []);
   
@@ -31,7 +33,15 @@ const PythonForm = () => {
       const remainingSeconds = seconds % 60;
       return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
-  
+
+    const navigate = useNavigate();
+
+    const handleNext = () => {
+      navigate("/blockchan");
+    };
+
+
+
     const questions = [
       {
         id: 1,
@@ -109,13 +119,15 @@ const PythonForm = () => {
           </Text>
         </Center>
         <Flex justify="space-between" mb="2rem" align="center">
-          <Text  fontSize="24" fontWeight="bold">React Quiz</Text>
-          <Text fontSize="22" fontWeight="bold">Time Left: {formatTime(timeLeft)}</Text>
+          <Text  fontSize="24" fontWeight="bold">Python Quiz</Text>
+          <Text fontSize="22" fontWeight="bold" color={"red"}>Time Left: {formatTime(timeLeft)}</Text>
         </Flex>
         <Flex direction="column" align="start" mb={2}>
           {questions.map((question, index) => (
             <Box key={question.id} mb={4}>
-              <Text mb={2} fontWeight="bold">{question.question}</Text>
+              <Text mb={2} fontWeight="bold" textAlign={"start"}>
+                {question.question}
+              </Text>
               <RadioGroup
                 onChange={(value) => handleOptionChange(index, value)}
                 value={selectedOptions[index]}
@@ -133,7 +145,7 @@ const PythonForm = () => {
         </Flex>
         {!isSubmitted ? (
            <Flex justify="flex-start" mb={4}>
-           <Button type="submit" colorScheme="teal">
+           <Button type="submit" colorScheme="teal" onClick={handleNext}>
              Next
            </Button>
          </Flex>

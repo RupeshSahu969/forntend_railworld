@@ -18,12 +18,15 @@ import {
 } from "@chakra-ui/react";
 
 import FamilyDetails from "../FamilyDetails/FamilyDetails";
+
 import { Form } from "react-router-dom";
 
 const StudentDetails = () => {
+
   const MAX_FILE_SIZE = 500;
 
   const handleFileChange = (e) => {
+
     const file = e.target.files[0];
 
     if (file) {
