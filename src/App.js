@@ -1,12 +1,14 @@
 import "./App.css";
 import MainRoutes from "./Components/MainRoutes";
+import ReactForm from "./Pages/React/ReactForm";
+import StudentDetails from "./Pages/StudentDetails/StudentDetails";
 
 function App() {
   
   return (
 
     <div className="App">
-      <MainRoutes/>
+      <ReactForm/>
     </div>
   );
 }
